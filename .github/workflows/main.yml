@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+jobs:
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+      - name: job1
+        run: echo "Job1 succeded"
+    job2:
+      runs-on: ubuntu-latest
+      needs: [job1]
+      steps:
+      - name: job2
+        run: echo "job2 ran succesfully"
+      
+      
